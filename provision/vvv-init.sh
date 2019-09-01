@@ -21,6 +21,9 @@ noroot mkdir -p ${VVV_PATH_TO_SITE}/log
 noroot touch ${VVV_PATH_TO_SITE}/log/nginx-error.log
 noroot touch ${VVV_PATH_TO_SITE}/log/nginx-access.log
 
+echo "Setting up public_html and index.php file"
+noroot touch ${VVV_PATH_TO_SITE}/public_html/index.php
+
 echo "Copying the sites Nginx config template ( fork this site template to customise the template )"
 cp -f "${VVV_PATH_TO_SITE}/provision/vvv-nginx.conf.tmpl" "${VVV_PATH_TO_SITE}/provision/vvv-nginx.conf"
 
